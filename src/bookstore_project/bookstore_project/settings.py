@@ -25,7 +25,7 @@ SECRET_KEY = 'kf-nvnj0cwy08+ibp(-1gaeks&r+-1lpez#k7t1xphiv!djo_='
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['bookstore.centralindia.cloudapp.azure.com']
 
 
 # Application definition
