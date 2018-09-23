@@ -14,7 +14,7 @@
 * Details: Implementation of a RESTful API for an online store. It would support addition, deletion, editing and searching a book. It will also support authentication (only authenticated users can add / view / edit / delete items). This API is created speculatively for a web developer who will use it to create a website. There are some example scenarios included along with the expected request / response objects.
 
 ## Accessible Link <a name="accessible"></a>
-* Running Git Repository of the app: [https://github.com/viresh18/bookstore-rest-api)
+* Running Git Repository of the app: [https://github.com/viresh18/bookstore-rest-api](https://github.com/viresh18/bookstore-rest-api)
 
 ## Routes Table <a name="route"></a>
 HTTP Verb | Path | Action | Used for
