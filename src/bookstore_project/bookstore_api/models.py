@@ -58,3 +58,15 @@ class UserProfile(AbstractBaseUser, PermissionsMixin):
     def __str__(self):
         """Django uses thsi when it needs to convert the object to a string"""
         return self.email
+
+class BookStoreItem(models.Model):
+    """Bookstore item update."""
+    user_profile = models.ForeignKey('UserProfile', on_delete=models.CASCADE)
+    book_name = models.CharField(max_length=255)
+    author_name = models.CharField(max_length=255)
+    genre_name = models.CharField(max_length=255)
+    publication_house_name = models.CharField(max_length=255)
+    added_on = models.DateTimeField(auto_now_add=True)
+    def __str__(self):
+        """Return the model as a string."""
+        return self.author_name
