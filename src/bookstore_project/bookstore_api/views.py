@@ -34,13 +34,13 @@ class LoginViewSet(viewsets.ViewSet):
         """Use the ObtainAuthToken APIView to validate and create a token."""
         return ObtainAuthToken().post(request)
 
-class BookStoreItemViewSet(viewsets.ModelViewSet):
+class BooksViewSet(viewsets.ModelViewSet):
     """Handles creating, reading and updating profile feed items."""
     authentication_classes= (TokenAuthentication,)
-    serializer_class =  serializers.UpdateBookItemsSerializer
-    queryset = models.BookStoreItem.objects.all()
+    serializer_class =  serializers.UpdateBooksSerializer
+    queryset = models.Books.objects.all()
     #permission_classes = (permissions.PostOwnStatus, IsAuthenticatedOrReadOnly)
-    permission_classes = (permissions.UpdateBookItems, IsAuthenticated)
+    permission_classes = (permissions.UpdateBooks, IsAuthenticated)
     #permission_classes = (IsAuthenticated,)
     filter_backends = (filters.SearchFilter,)
     search_fields = ('author_name', 'genre_name',)

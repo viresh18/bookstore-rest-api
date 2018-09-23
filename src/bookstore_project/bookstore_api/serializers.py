@@ -21,9 +21,9 @@ class UserProfileSerializer(serializers.ModelSerializer):
 
         return user
 
-class UpdateBookItemsSerializer(serializers.ModelSerializer):
+class UpdateBooksSerializer(serializers.ModelSerializer):
     """A serializer for profile feed items."""
     class Meta:
-        model = models.BookStoreItem
+        model = models.Books
         fields = ('id', 'user_profile','book_name','author_name', 'genre_name', 'publication_house_name','added_on')
         extra_kwargs = {'user_profile': {'read_only': True}}

@@ -59,7 +59,7 @@ class UserProfile(AbstractBaseUser, PermissionsMixin):
         """Django uses thsi when it needs to convert the object to a string"""
         return self.email
 
-class BookStoreItem(models.Model):
+class Books(models.Model):
     """Bookstore item update."""
     user_profile = models.ForeignKey('UserProfile', on_delete=models.CASCADE)
     book_name = models.CharField(max_length=255)
